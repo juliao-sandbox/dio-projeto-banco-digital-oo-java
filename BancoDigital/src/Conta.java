@@ -1,9 +1,16 @@
-public class Conta implements IConta {
+import lombok.Getter;
+import lombok.ToString;
+
+@ToString
+public abstract class Conta implements IConta {
     private static final int AGENCIA_PADRAO = 1;
     private static int SEQUENCIAL = 1;
 
+    @Getter
     protected int agencia;
+    @Getter
     protected int numero;
+    @Getter
     protected double saldo;
     protected Cliente cliente;
 
@@ -27,23 +34,6 @@ public class Conta implements IConta {
     public void transferir(double valor, IConta contaDestino) {
         this.sacar(valor);
         contaDestino.depositar(valor);
-    }
-
-    @Override
-    public void imprimirExtrato() {
-
-    }
-
-    public int getAgencia() {
-        return agencia;
-    }
-
-    public int getNumero() {
-        return numero;
-    }
-
-    public double getSaldo() {
-        return saldo;
     }
 
     protected void imprimirInfosComuns() {

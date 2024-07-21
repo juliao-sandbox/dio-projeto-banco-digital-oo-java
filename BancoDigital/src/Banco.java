@@ -1,22 +1,29 @@
+import lombok.Getter;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class Banco {
+    @Getter
     private String nome;
     private List<Conta> contas;
 
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
+    public Banco(String nome) {
         this.nome = nome;
+        this.contas = new ArrayList<Conta>();
     }
 
-    public List<Conta> getContas() {
-        return contas;
+    public void listarContas() {
+        for (Conta conta : contas) {
+            System.out.println(" - " + conta);
+        }
     }
 
-    public void setContas(List<Conta> contas) {
-        this.contas = contas;
+    public boolean adicionarConta(Conta conta) {
+        return contas.add(conta);
+    }
+
+    public boolean removerConta(Conta conta) {
+        return contas.remove(conta);
     }
 }

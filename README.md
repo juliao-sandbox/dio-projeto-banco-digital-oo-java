@@ -1,6 +1,6 @@
 # DIO - Projeto: Criando um Banco Digital com Java e Orientação a Objetos
 
-Programa simples que simula um banco digital via terminal, utilizando programação orientada a objetos em Java.
+Programa simples que simula um banco digital via terminal, utilizando programação orientada a objetos em Java e a biblioteca Lombok para auxiliar na geração automática dos métodos getters, setters e toString.
 
 Este projeto foi descrito em [Criando um Banco Digital com Java e Orientação a Objetos](https://github.com/falvojr/lab-banco-digital-oo).
 
